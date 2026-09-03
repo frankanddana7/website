@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550" width="550" height="550">
+  <rect width="550" height="550" fill="#CFA99C"/>
+  <polygon points="50,500 275,60 500,500" fill="#D8C2B5"/>
+  <polygon points="150,500 350,180 500,500" fill="#C58F82" opacity="0.85"/>
+  <text x="20" y="526" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#1a1a1a" opacity="0.55">06.svg</text>
+</svg>

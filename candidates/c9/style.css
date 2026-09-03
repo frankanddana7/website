@@ -1,0 +1,206 @@
+/* ===========================================================
+   Studio Subasio — editorial / exhibition-catalogue style
+   One stylesheet for all nine pages. Mobile-first; desktop
+   widens the measure and eases spacing via min-width queries.
+   =========================================================== */
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #ffffff;
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --measure: 640px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  overflow-x: hidden; /* safety net for full-bleed images at 100vw */
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ink); }
+
+.measure {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* -- eyebrow: small-caps letterspaced label, the recurring motif -- */
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .72rem;
+  color: var(--ink);
+  opacity: .62;
+  margin: 0 0 .5rem;
+}
+
+/* -- reading-progress hairline: fixed, thin, unobtrusive -- */
+.progress-track {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--stone-cream);
+  z-index: 50;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--stone-salmon);
+}
+
+/* -- header / nav -- */
+.site-header { padding: 1.75rem 0 1.25rem; }
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1.5rem;
+}
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: .02em;
+}
+.site-nav { font-family: var(--font-sans); }
+.site-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .78rem;
+  margin-left: 1.25rem;
+  padding: .85rem 0;
+  display: inline-block;
+}
+.site-nav a:first-child { margin-left: 0; }
+.site-nav a[aria-current="page"] { border-bottom: 1px solid var(--stone-salmon); }
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--stone-cream);
+  margin: 0;
+}
+
+/* -- headings & copy -- */
+h1 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: .25rem 0 1.1rem;
+}
+h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  margin: 0 0 .4rem;
+}
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1rem; }
+.intro { font-size: 1.1rem; }
+
+/* -- hero (home) -- */
+.hero { padding: 1rem 0 2.5rem; }
+.hero h1 { font-size: 2.5rem; }
+
+/* -- catalogue index (home page — THE addition) -- */
+.catalogue { padding: 1.5rem 0 3rem; }
+.index-list { list-style: none; margin: 0; padding: 0; }
+.index-list li { border-top: 1px solid var(--stone-cream); }
+.index-list li:last-child { border-bottom: 1px solid var(--stone-cream); }
+.index-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 1.1rem 0;
+}
+.index-num {
+  font-family: var(--font-sans);
+  font-size: .8rem;
+  letter-spacing: .08em;
+  opacity: .55;
+  width: 1.6rem;
+  flex: none;
+}
+.index-name { font-size: 1.25rem; flex: 1 1 auto; min-width: 0; }
+.index-count {
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .55;
+  flex: none;
+}
+.index-list a:hover .index-name { color: var(--stone-salmon); }
+
+/* -- project page pieces -- */
+.project-head { padding: 1.5rem 0 2rem; }
+.gallery { padding-bottom: 1rem; }
+.piece { margin: 0 0 3.5rem; }
+.piece img { border: 0; }
+.piece figcaption { padding-top: .9rem; }
+.plate-num {
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  opacity: .5;
+  display: block;
+  margin-bottom: .3rem;
+}
+
+/* full-bleed image moment: breaks out to the viewport edge */
+.piece--full { width: 100vw; margin-left: calc(50% - 50vw); }
+.piece--full figcaption { padding-left: 1.25rem; padding-right: 1.25rem; }
+
+.back-link { display: inline-block; margin: 1rem 0 2.5rem; padding: .6rem 0; font-family: var(--font-sans); font-size: .85rem; }
+
+/* -- about page -- */
+.artist { padding: 2rem 0; }
+
+/* -- contact banner -- */
+.contact-banner {
+  background: var(--stone-cream);
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+}
+.contact-banner .eyebrow { opacity: .7; }
+.contact-line { font-size: 1.2rem; margin: 0; }
+.contact-line a { text-decoration: none; padding: .5rem 0; }
+.contact-line a:hover { text-decoration: underline; }
+
+.site-footer { padding: 1.5rem 0 3rem; }
+.site-footer p {
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  letter-spacing: .04em;
+  opacity: .55;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  body { font-size: 1.1rem; }
+  .hero h1 { font-size: 3.2rem; }
+  h1 { font-size: 2.5rem; }
+  .site-header { padding: 2.5rem 0 1.5rem; }
+  .index-name { font-size: 1.4rem; }
+  .piece { margin-bottom: 4.5rem; }
+}
+
+@media (min-width: 900px) {
+  :root { --measure: 680px; }
+}

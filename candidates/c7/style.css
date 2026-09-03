@@ -1,0 +1,121 @@
+/* =========================================================
+   Studio Subasio — editorial / exhibition catalogue style
+   One stylesheet, no build step. Sections are labelled so a
+   non-coder (or their chatbot) can find the right spot fast.
+   ========================================================= */
+
+:root {
+  --ink:          #1a1a1a;
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --measure: 34rem; /* comfortable reading width of the text column */
+}
+
+/* ---------- reset & base ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  font-size: 17px;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ink); }
+a:hover { color: var(--stone-salmon); }
+
+/* ---------- small-caps letterspaced labels ---------- */
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone-salmon);
+  margin: 0 0 0.5rem;
+}
+
+/* ---------- hairline rule ---------- */
+.rule { border: none; border-top: 1px solid var(--stone-cream); margin: 2.5rem 0; }
+
+/* ---------- header / nav ---------- */
+.site-header { padding: 1.75rem 1.25rem 1rem; border-bottom: 1px solid var(--stone-cream); }
+.brand {
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.site-nav { display: flex; flex-wrap: wrap; gap: 0.9rem 1.4rem; }
+.site-nav a {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.4rem 0; /* generous tap target with line-height */
+}
+.site-nav a.current { border-bottom: 1px solid var(--stone-salmon); }
+
+/* ---------- page shell / text measure ---------- */
+main { padding: 2.5rem 1.25rem 1rem; }
+.measure { max-width: var(--measure); margin: 0 auto; }
+h1 { font-size: 2.1rem; font-weight: normal; line-height: 1.15; margin: 0 0 1rem; }
+h2 { font-weight: normal; font-size: 1.3rem; }
+.intro { font-size: 1.05rem; }
+
+/* ---------- home: numbered index of projects ---------- */
+.index-list { list-style: none; margin: 1rem 0; padding: 0; }
+.index-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--stone-cream);
+  text-decoration: none;
+  color: var(--ink);
+}
+.index-row:hover { color: var(--stone-salmon); }
+.index-num { font-size: 0.85rem; color: var(--stone-salmon); min-width: 1.6rem; }
+.index-title { font-size: 1.25rem; flex: 1; }
+.index-desc { font-size: 0.85rem; color: #555; display: none; }
+
+/* ---------- project page: image blocks ---------- */
+.piece { margin: 0 0 3rem; padding: 0; border: none; }
+.piece-num { font-size: 0.8rem; color: var(--stone-salmon); letter-spacing: 0.08em; }
+.piece figcaption { margin-top: 0.75rem; }
+.piece h3 { font-size: 1.05rem; font-weight: normal; margin: 0.2rem 0 0.4rem; }
+.piece p { margin: 0; color: #333; }
+
+/* ---------- about page ---------- */
+.artist { margin: 0 0 2.5rem; }
+.artist img { margin-bottom: 1rem; }
+
+/* ---------- contact banner ---------- */
+.contact-banner {
+  background: var(--stone-cream);
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.contact-banner p { margin: 0.3rem 0; }
+.contact-banner a { text-decoration: none; font-size: 1.05rem; }
+
+/* ---------- footer ---------- */
+.site-footer { padding: 1.5rem 1.25rem 2.5rem; font-size: 0.75rem; color: #777; text-align: center; }
+
+/* =========================================================
+   Desktop enhancement — wider viewport
+   ========================================================= */
+@media (min-width: 700px) {
+  body { font-size: 18px; }
+  .site-header { padding: 2.5rem 3rem 1.25rem; display: flex; justify-content: space-between; align-items: baseline; }
+  .brand { margin-bottom: 0; }
+  main { padding: 4rem 3rem 2rem; }
+  /* asymmetric measure: a narrow reading column, not centered full width */
+  .measure { margin-left: 14%; max-width: var(--measure); }
+  h1 { font-size: 2.75rem; }
+  .index-desc { display: block; }
+  .contact-banner { padding: 3.5rem 1.25rem; }
+}

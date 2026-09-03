@@ -1,0 +1,127 @@
+/* Studio Subasio — style.css. One file, mobile-first, no build step. */
+
+:root {
+  --ink:          #1a1a1a;
+  --paper:        #ffffff;
+  --line:         #cbbdb2;      /* hairline stone tone */
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --shadow:       0 1px 3px rgba(26, 20, 16, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+}
+
+a { color: var(--ink); }
+a:hover { color: var(--stone-salmon); }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- layout shell ---------- */
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+
+header.site { border-bottom: 1px solid var(--line); padding: 1.5rem 0; }
+header.site .wrap { display: flex; flex-direction: column; gap: 0.75rem; }
+.site-title { font-size: 1.5rem; letter-spacing: 0.02em; }
+
+nav.main ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main a {
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid transparent;
+}
+
+nav.main a:hover,
+nav.main a[aria-current="page"] { border-bottom-color: var(--stone-salmon); }
+
+main { padding: 2rem 0 3rem; }
+.intro { max-width: 60ch; }
+.intro p { font-size: 1.05rem; }
+
+/* ---------- floating boxes ---------- */
+
+.box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* project grid on the home page */
+.grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1rem; }
+
+.grid .box {
+  margin-bottom: 0;
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.grid a.box:hover {
+  box-shadow: 0 3px 10px rgba(26, 20, 16, 0.12);
+  transform: translateY(-2px);
+}
+
+.grid .box h2 { font-size: 1.15rem; }
+.grid .box p { margin: 0; font-size: 0.92rem; }
+
+@media (min-width: 620px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+/* ---------- gallery pieces (project pages) ---------- */
+
+figure.piece {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+  margin: 0 0 1.75rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+figure.piece img { border-bottom: 1px solid var(--line); }
+figure.piece figcaption { padding: 1rem 1.25rem 1.25rem; }
+figure.piece h3 { font-size: 1.1rem; }
+figure.piece p { margin: 0; font-size: 0.95rem; }
+
+/* ---------- contact banner ---------- */
+
+footer.contact {
+  background: var(--stone-cream);
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer.contact h2 { margin-bottom: 0.5rem; }
+footer.contact p { margin: 0.25rem 0; }
+footer.contact a { text-decoration: underline; }

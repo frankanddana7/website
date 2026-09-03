@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mosaics &mdash; Studio Subasio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-inner">
+      <a href="index.html" class="brand">Studio Subasio</a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-section">Projects</li>
+        <li><a href="paintings.html">Paintings</a></li>
+        <li><a href="graphic-design.html">Graphic Design</a></li>
+        <li><a href="silhouettes.html">Silhouettes</a></li>
+        <li><a href="mosaics.html" class="active">Mosaics</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="blank-1.html">Blank Project 1</a></li>
+        <li><a href="blank-2.html">Blank Project 2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <section class="box">
+      <p class="eyebrow">Project</p>
+      <h1>Mosaics</h1>
+      <p class="intro">Tesserae cut from local stone and set by hand, continuing a technique learned from Umbrian church floors. Each piece takes weeks to complete and is built directly onto a portable panel.</p>
+    </section>
+
+    <!-- Gallery: masonry-feel columns on wide screens, single column on mobile -->
+    <div class="gallery">
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <!-- To use a real photo: put it in images/ and change src to images/your-photo.jpg -->
+        <figure class="piece">
+          <img src="images/03.svg" alt="Square mosaic composition with triangular form">
+          <figcaption>
+            <h3>Subasio Floor Panel</h3>
+            <p>Local stone tesserae, 2023. Panel, 70 x 70 cm.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/04.svg" alt="Wide mosaic composition in stone tones">
+          <figcaption>
+            <h3>Olive Grove Panel</h3>
+            <p>Stone and glass tesserae, 2022. Panel, 90 x 50 cm.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/05.svg" alt="Tall mosaic composition with triangular form">
+          <figcaption>
+            <h3>Standing Stone</h3>
+            <p>Local stone tesserae, 2024. Panel, 50 x 75 cm.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/06.svg" alt="Square mosaic composition split in two tones">
+          <figcaption>
+            <h3>Two Fields, in Stone</h3>
+            <p>Stone tesserae, 2021. A mosaic companion to the painting of the same name.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/07.svg" alt="Wide mosaic composition with amber triangle">
+          <figcaption>
+            <h3>Threshold Panel</h3>
+            <p>Stone and glass tesserae, 2023. Panel, 85 x 56 cm.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/08.svg" alt="Tall mosaic composition in three bands">
+          <figcaption>
+            <h3>Terrace Bands</h3>
+            <p>Local stone tesserae, 2020. Panel, 55 x 80 cm.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+    </div>
+
+    <!-- Lightbox markup: one shared overlay, filled in by script.js -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" aria-label="Close enlarged image">&times;</button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <nav class="project-nav" aria-label="Project navigation">
+      <a href="silhouettes.html"><span class="dir">&larr; Previous project</span>Silhouettes</a>
+      <a href="photography.html"><span class="dir">Next project &rarr;</span>Photography</a>
+    </nav>
+
+    <section class="contact-banner">
+      <h2>Reach out to us</h2>
+      <p><a href="mailto:ciao@studiosubasio.example">ciao@studiosubasio.example</a></p>
+      <p><a href="tel:+39000000000">+39 000 000 000</a></p>
+    </section>
+
+    <footer class="site-footer">&copy; Studio Subasio &mdash; placeholder site</footer>
+
+  </main>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

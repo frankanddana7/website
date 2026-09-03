@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Subasio — Nome Uno &amp; Nome Due</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav>
+    <a href="index.html" class="brand">Studio Subasio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="paintings.html">Paintings</a></li>
+      <li><a href="graphic-design.html">Graphic Design</a></li>
+      <li><a href="silhouettes.html">Silhouettes</a></li>
+      <li><a href="mosaics.html">Mosaics</a></li>
+      <li><a href="photography.html">Photography</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-card">
+      <span class="eyebrow">Assisi · Umbria</span>
+      <h1>Studio Subasio</h1>
+      <p>Two artists, one studio at the foot of Monte Subasio. Nome Uno and
+      Nome Due make paintings, silhouettes, mosaics, graphic design and
+      photography, all shaped by the stone and light of Umbria.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="about.html">Meet the artists</a>
+        <a class="btn btn-secondary" href="#work">See the work</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="wrap">
+    <h2>The work</h2>
+    <p class="intro">Five ongoing bodies of work. Filter by category, or
+    scroll through everything below.</p>
+
+    <div class="chips" role="group" aria-label="Filter projects by category">
+      <button class="chip active" data-filter="all" type="button">All</button>
+      <button class="chip" data-filter="paintings" type="button">Paintings</button>
+      <button class="chip" data-filter="graphic-design" type="button">Graphic Design</button>
+      <button class="chip" data-filter="silhouettes" type="button">Silhouettes</button>
+      <button class="chip" data-filter="mosaics" type="button">Mosaics</button>
+      <button class="chip" data-filter="photography" type="button">Photography</button>
+    </div>
+
+    <div class="card-grid">
+      <a class="card reveal" href="paintings.html" data-category="paintings">
+        <img src="images/01.svg" alt="Placeholder painting artwork in cream and rose stone tones">
+        <div class="card-body">
+          <h3>Paintings</h3>
+          <p>Layered oil and acrylic studies built from the palette of the Umbrian hills.</p>
+        </div>
+      </a>
+      <a class="card reveal" href="graphic-design.html" data-category="graphic-design">
+        <img src="images/04.svg" alt="Placeholder graphic design composition in amber and rose">
+        <div class="card-body">
+          <h3>Graphic Design</h3>
+          <p>Posters, identities and print work for local makers and small studios.</p>
+        </div>
+      </a>
+      <a class="card reveal" href="silhouettes.html" data-category="silhouettes">
+        <img src="images/02.svg" alt="Placeholder silhouette artwork on large-format photographic paper">
+        <div class="card-body">
+          <h3>Silhouettes</h3>
+          <p>Large-format photographic paper works exploring the human silhouette.</p>
+        </div>
+      </a>
+      <a class="card reveal" href="mosaics.html" data-category="mosaics">
+        <img src="images/03.svg" alt="Placeholder mosaic artwork of stone and tile fragments">
+        <div class="card-body">
+          <h3>Mosaics</h3>
+          <p>Stone and tile mosaics assembled by hand, piece by piece.</p>
+        </div>
+      </a>
+      <a class="card reveal" href="photography.html" data-category="photography">
+        <img src="images/07.svg" alt="Placeholder photography composition of layered stone circles">
+        <div class="card-body">
+          <h3>Photography</h3>
+          <p>Landscape and architectural studies of Assisi and the Umbrian valley.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <div class="wrap">
+      <h2>Reach out to us</h2>
+      <p>Studio visits, commissions and press inquiries are always welcome.</p>
+      <div class="contact-links">
+        <a href="mailto:ciao@studiosubasio.example">ciao@studiosubasio.example</a>
+        <a href="tel:+39000000000">+39 000 000 000</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Studio Subasio, Assisi. Placeholder studio name — see README.
+  Draft pages: <a href="blank-1.html">Blank Project 1</a> ·
+  <a href="blank-2.html">Blank Project 2</a></p>
+</footer>
+
+<!-- Lightbox for gallery images, used on project pages (see script.js) -->
+<div class="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Close enlarged image" type="button">&times;</button>
+  <img src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+  <rect width="700" height="700" fill="#f8f4f0"/>
+  <polygon points="0,700 350,150 700,700" fill="#CFA99C"/>
+  <rect x="500" y="60" width="150" height="150" fill="#C58F82"/>
+  <circle cx="150" cy="150" r="90" fill="#C9AA87"/>
+  <text x="670" y="670" font-family="Georgia, serif" font-size="16" fill="#3a2c24" text-anchor="end">03.svg</text>
+</svg>

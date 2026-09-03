@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 800">
+  <rect width="500" height="800" fill="#F7F2EF"/>
+  <polygon points="250,90 460,650 40,650" fill="#C9AA87"/>
+  <polygon points="250,260 380,650 120,650" fill="#CFA99C"/>
+  <text x="470" y="770" font-family="system-ui, sans-serif" font-size="16" fill="#1a1a1a" text-anchor="end">02.svg</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 450" width="850" height="450">
+  <rect width="850" height="450" fill="#C58F82"/>
+  <circle cx="180" cy="225" r="150" fill="#C9AA87"/>
+  <circle cx="470" cy="225" r="150" fill="#D8C2B5"/>
+  <circle cx="700" cy="225" r="150" fill="#CFA99C"/>
+  <text x="24" y="426" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#1a1a1a" opacity="0.55">07.svg</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 800" width="500" height="800">
+  <rect width="500" height="800" fill="#C58F82"/>
+  <polygon points="0,800 500,800 500,420" fill="#C9AA87"/>
+  <circle cx="250" cy="220" r="150" fill="#D8C2B5"/>
+  <text x="14" y="778" font-family="system-ui,sans-serif" font-size="18" fill="#1a1a1a" opacity="0.6">02.svg</text>
+</svg>

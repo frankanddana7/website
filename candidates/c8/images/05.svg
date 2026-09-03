@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900">
+  <rect width="600" height="900" fill="#C58F82"/>
+  <circle cx="300" cy="330" r="230" fill="#ffffff" opacity="0.18"/>
+  <circle cx="300" cy="330" r="120" fill="#ffffff" opacity="0.22"/>
+  <text x="22" y="876" font-family="Georgia, serif" font-size="16" fill="#ffffff" opacity="0.75">05.svg</text>
+</svg>

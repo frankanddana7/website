@@ -1,0 +1,289 @@
+/* =========================================================
+   STUDIO SUBASIO — style.css
+   Editorial / exhibition-catalogue style.
+   White page, serif display type, stone hairlines only.
+   One stylesheet for all nine pages. No build step.
+   ========================================================= */
+
+/* ---------- 1. Foundations ---------- */
+:root {
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --ink:   #1a1a1a;
+  --paper: #ffffff;
+  --serif: Georgia, 'Times New Roman', Times, serif;
+  --sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --measure: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.1rem, 8vw, 3.4rem); }
+h2 { font-size: clamp(1.5rem, 5vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1.1em; }
+
+/* small-caps letterspaced label, the recurring "catalogue label" */
+.label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone-salmon);
+}
+
+/* narrow reading column — the only text measure on the site */
+.measure {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+hr, .rule {
+  border: none;
+  border-top: 1px solid var(--stone-rose);
+  margin: 2.5rem 0;
+}
+
+/* ---------- 2. Scroll progress rule ---------- */
+.progress-track {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 100;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--stone-salmon);
+}
+
+/* ---------- 3. Header / nav ---------- */
+.site-header {
+  padding: 1.75rem 1.25rem 1.1rem;
+  border-bottom: 1px solid var(--stone-rose);
+}
+.wordmark {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.wordmark span { color: var(--stone-salmon); }
+
+nav.site-nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+}
+nav.site-nav a {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0.1rem; /* keeps tap target tall enough */
+  border-bottom: 1px solid transparent;
+}
+nav.site-nav a:hover,
+nav.site-nav a.active { border-bottom-color: var(--stone-salmon); }
+
+/* ---------- 4. Sticky project section bar ---------- */
+.section-bar {
+  position: sticky;
+  top: 3px;
+  z-index: 10;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--stone-rose);
+  padding: 0 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.section-bar .num { color: var(--stone-salmon); }
+
+/* ---------- 5. Page intro block ---------- */
+.intro { padding: 3rem 0 1rem; }
+.intro .num-large {
+  font-family: var(--serif);
+  color: var(--stone-rose);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+.intro p:last-child { margin-bottom: 0; }
+
+/* ---------- 6. Index list (home page) ---------- */
+.index-list { list-style: none; margin: 0; padding: 0; }
+.index-list li {
+  border-top: 1px solid var(--stone-rose);
+  padding: 1.4rem 0;
+}
+.index-list li:last-child { border-bottom: 1px solid var(--stone-rose); }
+.index-list a {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.index-list .num {
+  font-family: var(--serif);
+  color: var(--stone-salmon);
+  font-size: 1.1rem;
+  flex: 0 0 auto;
+  width: 2ch;
+}
+.index-list .thumb {
+  width: 68px; height: 68px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.index-list .entry-text { flex: 1 1 auto; min-width: 0; }
+.index-list h2 { margin: 0 0 0.2rem; font-size: 1.35rem; }
+.index-list p { margin: 0; font-size: 0.9rem; color: #444; }
+
+/* ---------- 7. Pieces (project image blocks) ---------- */
+.pieces { padding: 1rem 0 3rem; }
+.piece { margin: 3rem 0; }
+.piece figcaption { margin-top: 0.9rem; }
+.piece figcaption h3::before {
+  counter-increment: piece;
+  content: counter(piece, decimal-leading-zero) '  —  ';
+  color: var(--stone-salmon);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+.pieces { counter-reset: piece; }
+.piece figcaption p { color: #333; font-size: 0.95rem; }
+.art { cursor: zoom-in; }
+
+/* full-bleed break-out — the signature move */
+.bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+.piece--bleed figcaption { margin-top: 1rem; }
+
+/* ---------- 8. About page bios ---------- */
+.bio { margin: 2.5rem 0; }
+.bio img { width: 100%; }
+.bio h2 { margin-bottom: 0.3rem; }
+
+/* ---------- 9. Scroll reveal (progressive enhancement) ---------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 10. Contact banner ---------- */
+.contact-banner {
+  background: var(--stone-cream);
+  padding: 3rem 1.25rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.contact-banner .label { color: var(--ink); opacity: 0.65; }
+.contact-banner h2 { margin: 0.4rem 0 1rem; }
+.contact-banner p { margin: 0.2rem 0; font-size: 1.05rem; }
+.contact-banner a { text-decoration: underline; }
+
+footer.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+/* ---------- 11. Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  background: rgba(26, 26, 26, 0.92);
+  padding: 4rem 1.25rem;
+}
+.lightbox.open { display: flex; align-items: center; justify-content: center; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+  width: auto;
+}
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem; right: 0.75rem;
+  width: 48px; height: 48px;
+  background: transparent;
+  border: 1px solid var(--stone-cream);
+  color: var(--stone-cream);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ---------- 12. Larger screens ---------- */
+@media (min-width: 640px) {
+  body { font-size: 18px; }
+  .site-header { padding: 2.25rem 2rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .wordmark { margin-bottom: 0; }
+  .section-bar, .measure, .intro, .contact-banner { padding-left: 2rem; padding-right: 2rem; }
+  .index-list .thumb { width: 96px; height: 96px; }
+  .about-grid { display: flex; gap: 3rem; }
+  .about-grid .bio { flex: 1; margin: 0; }
+}
+
+@media (min-width: 900px) {
+  .measure, .intro, .contact-banner { padding-left: 0; padding-right: 0; }
+}

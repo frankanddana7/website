@@ -1,0 +1,181 @@
+/* ============================================================
+   Studio Subasio — candidate c3
+   Modern / rounded / soft-shadow style.
+   One file, plain CSS, no build step. Edit freely.
+   ============================================================ */
+
+:root {
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --ink: #1a1a1a;
+  --radius: 20px;
+  --shadow: 0 14px 34px -14px rgba(26, 20, 16, 0.25);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--ink); }
+
+/* ---------- nav ---------- */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 18px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.nav-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #f4efe9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background 0.2s ease;
+}
+.nav-links a:hover, .nav-links a:focus { background: var(--stone-cream); }
+
+/* ---------- layout ---------- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+h1 { font-size: clamp(2rem, 6vw, 2.8rem); font-weight: 800; margin: 10px 0 16px; }
+h2, h3 { font-weight: 800; }
+.intro { font-size: 1.08rem; max-width: 60ch; color: #333; margin-bottom: 36px; }
+
+/* ---------- project pieces ---------- */
+.piece {
+  margin: 0 0 40px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ece5df;
+  box-shadow: var(--shadow);
+}
+.piece img { width: 100%; }
+.piece figcaption { padding: 20px 24px 24px; }
+.piece h3 { font-size: 1.25rem; margin: 0 0 6px; }
+.piece p { margin: 0; color: #444; }
+
+/* ---------- about page ---------- */
+.artist {
+  border-radius: var(--radius);
+  background: #faf6f2;
+  padding: 24px 26px;
+  margin-bottom: 24px;
+}
+.artist h2 { margin: 0 0 8px; font-size: 1.3rem; }
+
+/* ---------- pill link grid (home) ---------- */
+.tag-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.tag-grid a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--stone-cream);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+.tag-grid a:hover, .tag-grid a:focus { background: var(--stone-amber); }
+
+/* ---------- contact banner ---------- */
+.contact {
+  border-radius: 28px 28px 0 0;
+  background: linear-gradient(135deg, var(--stone-cream), var(--stone-amber));
+  padding: 44px 20px;
+  text-align: center;
+}
+.contact h2 { margin: 0 0 10px; }
+.contact p { margin: 0 0 18px; }
+.contact .details { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.contact .details a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   THE ONE ADDITION — home page only.
+   A floating white card over a slow, low-contrast drifting
+   stone gradient. Interior pages stay plain white (no class).
+   ============================================================ */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 16px;
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background: linear-gradient(120deg,
+    var(--stone-cream), var(--stone-rose), var(--stone-amber), var(--stone-salmon));
+  background-size: 300% 300%;
+  animation: driftGradient 48s ease-in-out infinite;
+  z-index: -1;
+}
+@keyframes driftGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 28px;
+  padding: 44px 30px;
+  box-shadow: 0 24px 60px -18px rgba(26, 20, 16, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg::before { animation: none; }
+}
+
+/* ---------- small screens tighten padding a touch ---------- */
+@media (max-width: 480px) {
+  .card { padding: 32px 20px; }
+  main { padding: 16px 16px 50px; }
+}
+
+/* ---------- wider screens ---------- */
+@media (min-width: 640px) {
+  .nav-links a { font-size: 0.98rem; }
+}

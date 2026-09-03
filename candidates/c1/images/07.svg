@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#F7F2EF"/>
+  <path d="M0,450 A400,400 0 0,1 800,450 Z" fill="#D8C2B5"/>
+  <path d="M100,450 A300,300 0 0,1 700,450 Z" fill="#C9AA87"/>
+  <path d="M220,450 A180,180 0 0,1 580,450 Z" fill="#C58F82"/>
+  <text x="770" y="430" font-family="system-ui, sans-serif" font-size="16" fill="#1a1a1a" text-anchor="end">07.svg</text>
+</svg>

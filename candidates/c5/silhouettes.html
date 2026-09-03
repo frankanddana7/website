@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silhouettes &mdash; Studio Subasio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-inner">
+      <a href="index.html" class="brand">Studio Subasio</a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-section">Projects</li>
+        <li><a href="paintings.html">Paintings</a></li>
+        <li><a href="graphic-design.html">Graphic Design</a></li>
+        <li><a href="silhouettes.html" class="active">Silhouettes</a></li>
+        <li><a href="mosaics.html">Mosaics</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="blank-1.html">Blank Project 1</a></li>
+        <li><a href="blank-2.html">Blank Project 2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <section class="box">
+      <p class="eyebrow">Project</p>
+      <h1>Silhouettes</h1>
+      <p class="intro">Large-format works on photographic paper, each built around the silhouette of a figure caught against light. Printed and toned by hand in the studio's darkroom, then mounted unframed.</p>
+    </section>
+
+    <!-- Gallery: masonry-feel columns on wide screens, single column on mobile -->
+    <div class="gallery">
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <!-- To use a real photo: put it in images/ and change src to images/your-photo.jpg -->
+        <figure class="piece">
+          <img src="images/05.svg" alt="Tall photographic silhouette study">
+          <figcaption>
+            <h3>Figure at the Window</h3>
+            <p>Silver gelatin print, 2023. Printed at 100 x 150 cm.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/06.svg" alt="Square photographic silhouette study">
+          <figcaption>
+            <h3>Two Figures, Noon</h3>
+            <p>Silver gelatin print, 2022. From a series made over one August.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/07.svg" alt="Wide photographic silhouette study">
+          <figcaption>
+            <h3>Threshold</h3>
+            <p>Toned gelatin print, 2024. Doorway of the old olive mill.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/08.svg" alt="Tall photographic silhouette study in bands">
+          <figcaption>
+            <h3>Standing Figure</h3>
+            <p>Silver gelatin print, 2021. First piece in the series.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/01.svg" alt="Photographic silhouette study in cream and rose">
+          <figcaption>
+            <h3>Figure, Late Light</h3>
+            <p>Toned gelatin print, 2023. Made at the same hour as Hillside, Morning.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/02.svg" alt="Tall photographic silhouette study">
+          <figcaption>
+            <h3>Terrace Figure</h3>
+            <p>Silver gelatin print, 2022. Companion to the Terrace Study paintings.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+    </div>
+
+    <!-- Lightbox markup: one shared overlay, filled in by script.js -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" aria-label="Close enlarged image">&times;</button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <nav class="project-nav" aria-label="Project navigation">
+      <a href="graphic-design.html"><span class="dir">&larr; Previous project</span>Graphic Design</a>
+      <a href="mosaics.html"><span class="dir">Next project &rarr;</span>Mosaics</a>
+    </nav>
+
+    <section class="contact-banner">
+      <h2>Reach out to us</h2>
+      <p><a href="mailto:ciao@studiosubasio.example">ciao@studiosubasio.example</a></p>
+      <p><a href="tel:+39000000000">+39 000 000 000</a></p>
+    </section>
+
+    <footer class="site-footer">&copy; Studio Subasio &mdash; placeholder site</footer>
+
+  </main>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

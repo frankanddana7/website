@@ -1,0 +1,155 @@
+/* Studio Subasio — candidate c6
+   Style: clean / timeless / floating boxes.
+   White boxes floating on white, hairline stone borders, quiet shadows. */
+
+:root {
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --ink: #1a1a1a;
+  --hairline: #cbbdb3;
+  --shadow: 0 1px 3px rgba(26, 20, 16, 0.06);
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.25; margin: 0 0 0.5em; }
+p { margin: 0 0 1em; }
+a { color: var(--ink); }
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- header / nav ---------- */
+
+.site-header { border-bottom: 1px solid var(--hairline); }
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 20px;
+  padding: 16px 20px;
+}
+
+.brand { font-family: Georgia, serif; font-size: 1.2rem; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; }
+nav a { text-decoration: none; padding: 12px 10px; font-size: 0.95rem; color: #444; }
+nav a:hover { color: var(--ink); }
+
+/* ---------- generic floating box ---------- */
+
+.box { background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius); box-shadow: var(--shadow); }
+
+main { padding: 48px 0 64px; }
+h1 { font-size: 1.9rem; }
+.intro { max-width: 60ch; }
+
+/* ---------- home: showcase grid ---------- */
+
+.showcase { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+.proj { display: block; padding: 18px 20px; text-decoration: none; color: var(--ink); transition: opacity 0.25s ease; }
+.proj .thumb { border-radius: var(--radius); margin-bottom: 12px; }
+.proj-title { display: block; font-family: Georgia, serif; font-size: 1.15rem; }
+.proj-desc { display: block; margin-top: 4px; font-size: 0.9rem; color: #555; }
+.preview { display: none; }
+
+/* ---------- project pages ---------- */
+
+.pieces { display: grid; gap: 28px; margin-top: 40px; }
+.piece { margin: 0; padding: 20px; }
+.piece figcaption { margin-top: 14px; }
+.piece h3 { font-size: 1.1rem; }
+.piece p { margin-bottom: 0; color: #444; font-size: 0.95rem; }
+.piece img { border-radius: 2px; }
+
+/* ---------- prev / next walk ---------- */
+
+.walk {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+}
+
+.walk a { text-decoration: none; padding: 10px 4px; font-size: 0.95rem; color: #444; }
+.walk a:hover { color: var(--ink); }
+.walk .next { text-align: right; }
+.walk span { display: block; font-size: 0.78rem; color: #767676; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ---------- contact banner ---------- */
+
+.contact-banner { background: var(--stone-cream); text-align: center; padding: 40px 20px; }
+.contact-banner p { margin: 0 0 6px; }
+.contact-banner a { text-decoration: none; }
+.contact-banner a:hover { text-decoration: underline; }
+
+.site-footer { text-align: center; padding: 16px 20px; font-size: 0.8rem; color: #767676; }
+
+/* ---------- about page ---------- */
+
+.artists { display: grid; gap: 16px; margin-top: 32px; }
+.artist { padding: 22px; }
+
+/* ---------- desktop enhancements ---------- */
+
+@media (min-width: 700px) {
+  .showcase { grid-template-columns: 1fr 1fr; }
+  .proj { grid-column: 1; }
+  .proj .thumb { display: none; }
+
+  .preview {
+    display: block;
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / 8;
+    align-self: start;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .preview::before {
+    content: "hover a project to preview it";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.35s ease; }
+
+  /* hovering the group dims every box; the hovered box stays full strength */
+  .showcase:hover .proj { opacity: 0.45; }
+  .proj:hover { opacity: 1; }
+
+  /* each box reveals its own preview image in the panel opposite */
+  .proj:nth-of-type(1):hover ~ .preview img:nth-of-type(1),
+  .proj:nth-of-type(2):hover ~ .preview img:nth-of-type(2),
+  .proj:nth-of-type(3):hover ~ .preview img:nth-of-type(3),
+  .proj:nth-of-type(4):hover ~ .preview img:nth-of-type(4),
+  .proj:nth-of-type(5):hover ~ .preview img:nth-of-type(5),
+  .proj:nth-of-type(6):hover ~ .preview img:nth-of-type(6),
+  .proj:nth-of-type(7):hover ~ .preview img:nth-of-type(7) { opacity: 1; }
+
+  .pieces { grid-template-columns: 1fr; max-width: 640px; }
+  .artists { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography &mdash; Studio Subasio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-inner">
+      <a href="index.html" class="brand">Studio Subasio</a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-section">Projects</li>
+        <li><a href="paintings.html">Paintings</a></li>
+        <li><a href="graphic-design.html">Graphic Design</a></li>
+        <li><a href="silhouettes.html">Silhouettes</a></li>
+        <li><a href="mosaics.html">Mosaics</a></li>
+        <li><a href="photography.html" class="active">Photography</a></li>
+        <li><a href="blank-1.html">Blank Project 1</a></li>
+        <li><a href="blank-2.html">Blank Project 2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <section class="box">
+      <p class="eyebrow">Project</p>
+      <h1>Photography</h1>
+      <p class="intro">Quiet studies of light on stone and olive groves, shot through the seasons on the paths around Monte Subasio. Printed small and shown in series rather than as single images.</p>
+    </section>
+
+    <!-- Gallery: masonry-feel columns on wide screens, single column on mobile -->
+    <div class="gallery">
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <!-- To use a real photo: put it in images/ and change src to images/your-photo.jpg -->
+        <figure class="piece">
+          <img src="images/01.svg" alt="Photographic study in cream and rose tones">
+          <figcaption>
+            <h3>Hillside, Early Fog</h3>
+            <p>Archival print, 2024. First light on the terraces below the studio.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/02.svg" alt="Tall photographic study in dusty rose">
+          <figcaption>
+            <h3>Olive Trunk</h3>
+            <p>Archival print, 2023. Detail from a tree planted before the war.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/03.svg" alt="Square photographic study with triangular form">
+          <figcaption>
+            <h3>Subasio from the Road</h3>
+            <p>Archival print, 2022. Shot on the walk into Assisi.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/04.svg" alt="Wide photographic study of a landscape">
+          <figcaption>
+            <h3>Grove in Wind</h3>
+            <p>Archival print, 2021. Long exposure, late afternoon.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/05.svg" alt="Tall photographic study with warm triangle">
+          <figcaption>
+            <h3>Wall, Afternoon</h3>
+            <p>Archival print, 2023. Stone wall bordering the studio garden.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/06.svg" alt="Square photographic study split in two tones">
+          <figcaption>
+            <h3>Field Line</h3>
+            <p>Archival print, 2020. The boundary between two neighbouring farms.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+    </div>
+
+    <!-- Lightbox markup: one shared overlay, filled in by script.js -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" aria-label="Close enlarged image">&times;</button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <nav class="project-nav" aria-label="Project navigation">
+      <a href="mosaics.html"><span class="dir">&larr; Previous project</span>Mosaics</a>
+      <a href="blank-1.html"><span class="dir">Next project &rarr;</span>Blank Project 1</a>
+    </nav>
+
+    <section class="contact-banner">
+      <h2>Reach out to us</h2>
+      <p><a href="mailto:ciao@studiosubasio.example">ciao@studiosubasio.example</a></p>
+      <p><a href="tel:+39000000000">+39 000 000 000</a></p>
+    </section>
+
+    <footer class="site-footer">&copy; Studio Subasio &mdash; placeholder site</footer>
+
+  </main>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

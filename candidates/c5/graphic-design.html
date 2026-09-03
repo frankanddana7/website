@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphic Design &mdash; Studio Subasio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-inner">
+      <a href="index.html" class="brand">Studio Subasio</a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-section">Projects</li>
+        <li><a href="paintings.html">Paintings</a></li>
+        <li><a href="graphic-design.html" class="active">Graphic Design</a></li>
+        <li><a href="silhouettes.html">Silhouettes</a></li>
+        <li><a href="mosaics.html">Mosaics</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="blank-1.html">Blank Project 1</a></li>
+        <li><a href="blank-2.html">Blank Project 2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <section class="box">
+      <p class="eyebrow">Project</p>
+      <h1>Graphic Design</h1>
+      <p class="intro">Print and identity work made for local growers, small festivals and the studio's own materials. Most of it starts as pencil marks on the same stone-coloured paper used for the paintings.</p>
+    </section>
+
+    <!-- Gallery: masonry-feel columns on wide screens, single column on mobile -->
+    <div class="gallery">
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <!-- To use a real photo: put it in images/ and change src to images/your-photo.jpg -->
+        <figure class="piece">
+          <img src="images/07.svg" alt="Abstract landscape graphic with amber triangle">
+          <figcaption>
+            <h3>Frantoio Label</h3>
+            <p>Letterpress on kraft paper, 2023. Label design for a small olive-oil press.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/08.svg" alt="Abstract tall graphic in three stone bands">
+          <figcaption>
+            <h3>Sagra Poster</h3>
+            <p>Risograph print, 2022. Poster for the village's autumn festival.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/01.svg" alt="Abstract graphic composition in cream and rose">
+          <figcaption>
+            <h3>Studio Letterhead</h3>
+            <p>Offset print, 2024. Stationery set for Studio Subasio.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/02.svg" alt="Abstract vertical graphic in dusty rose">
+          <figcaption>
+            <h3>Market Signage</h3>
+            <p>Screen print on board, 2021. Signage for the weekly Saturday market.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/03.svg" alt="Abstract square graphic with triangular form">
+          <figcaption>
+            <h3>Wine Label Series</h3>
+            <p>Offset print, 2023. A set of four labels for a family vineyard.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+        <!-- IMAGE BLOCK — copy this whole block to add another piece -->
+        <figure class="piece">
+          <img src="images/04.svg" alt="Wide abstract graphic composition">
+          <figcaption>
+            <h3>Trail Map</h3>
+            <p>Risograph print, 2022. Hand-drawn map of the Subasio footpaths.</p>
+          </figcaption>
+        </figure>
+        <!-- END IMAGE BLOCK -->
+    </div>
+
+    <!-- Lightbox markup: one shared overlay, filled in by script.js -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" aria-label="Close enlarged image">&times;</button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <nav class="project-nav" aria-label="Project navigation">
+      <a href="paintings.html"><span class="dir">&larr; Previous project</span>Paintings</a>
+      <a href="silhouettes.html"><span class="dir">Next project &rarr;</span>Silhouettes</a>
+    </nav>
+
+    <section class="contact-banner">
+      <h2>Reach out to us</h2>
+      <p><a href="mailto:ciao@studiosubasio.example">ciao@studiosubasio.example</a></p>
+      <p><a href="tel:+39000000000">+39 000 000 000</a></p>
+    </section>
+
+    <footer class="site-footer">&copy; Studio Subasio &mdash; placeholder site</footer>
+
+  </main>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

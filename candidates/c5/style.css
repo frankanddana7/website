@@ -1,0 +1,272 @@
+/* ==========================================================================
+   Studio Subasio — candidate c5
+   Style: clean / timeless / floating boxes
+   White boxes on a white page, stone hairlines, restrained shadow.
+   One file, plain CSS, no build step. Read top to bottom:
+   1. Reset & base   2. Type   3. Layout & sidebar nav   4. Boxes
+   5. Home            6. About  7. Project pages & gallery
+   8. Scroll-reveal   9. Lightbox  10. Prev/next & contact  11. Responsive
+   ========================================================================== */
+
+/* ---------- 1. Reset & base ---------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root {
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --ink:          #1a1a1a;
+  --ink-soft:     #4a4a4a;
+  --hairline:     #ded4cc;
+  --radius:       3px;
+  --shadow:       0 1px 3px rgba(0, 0, 0, 0.07);
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--ink); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--stone-salmon); outline-offset: 2px; }
+
+/* ---------- 2. Type ---------- */
+h1, h2, h3 { font-family: var(--serif); font-weight: normal; color: var(--ink); }
+h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; margin: 0 0 0.4rem; }
+p { margin: 0 0 1rem; color: var(--ink-soft); }
+.eyebrow {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--stone-salmon);
+  margin: 0 0 0.6rem;
+}
+
+/* ---------- 3. Layout & sidebar nav ---------- */
+.layout { display: block; }
+
+.sidebar {
+  background: #fff;
+  border-bottom: 1px solid var(--hairline);
+}
+.sidebar-inner { padding: 0.9rem 1rem; }
+.brand {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+}
+.nav-section { display: none; }
+.nav-list a {
+  display: inline-block;
+  padding: 0.5rem 0.1rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  min-height: 44px;
+  line-height: 1.3;
+}
+.nav-list a:hover { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--stone-salmon); }
+.nav-list a.active { color: var(--ink); border-bottom: 1px solid var(--stone-rose); }
+
+.content { padding: 1.25rem 1rem 3rem; max-width: 900px; margin: 0 auto; }
+
+/* ---------- 4. Boxes (the signature unit) ---------- */
+.box {
+  background: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+  margin: 0 0 1.4rem;
+}
+
+/* ---------- 5. Home ---------- */
+.hero p { max-width: 46em; }
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  transition: box-shadow 0.2s ease;
+}
+.card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.09); }
+.card h3 { margin-bottom: 0.3rem; }
+.card .swatch {
+  height: 6px;
+  border-radius: 2px;
+  margin-bottom: 0.8rem;
+  background: var(--stone-amber);
+}
+
+/* ---------- 6. About ---------- */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* ---------- 7. Project pages & masonry gallery ---------- */
+.intro { max-width: 46em; }
+
+.gallery {
+  columns: 1;
+  column-gap: 1rem;
+}
+.piece {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  background: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0 0 1rem;
+  padding: 0;
+  overflow: hidden;
+}
+.piece img {
+  cursor: zoom-in;
+  border-bottom: 1px solid var(--hairline);
+}
+.piece figcaption { padding: 0.9rem 1rem 1.1rem; }
+.piece figcaption p { margin: 0; font-size: 0.92rem; }
+
+/* ---------- 8. Scroll-reveal (progressive enhancement) ---------- */
+/* Content stays visible without JS; only .js html gets the fade setup. */
+html.js .piece { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+html.js .piece.in-view { opacity: 1; transform: translateY(0); }
+
+/* ---------- 9. Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 16, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  z-index: 100;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 82vh;
+  width: auto;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-close:hover { background: rgba(0,0,0,0.55); }
+
+/* ---------- 10. Prev/next & contact banner ---------- */
+.project-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.6rem 0;
+}
+.project-nav a {
+  display: block;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  min-height: 44px;
+}
+.project-nav .dir { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--stone-salmon); margin-bottom: 0.2rem; }
+
+.contact-banner {
+  background: var(--stone-cream);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+.contact-banner h2 { margin-bottom: 0.4rem; }
+.contact-banner p { color: #3a2c24; margin: 0.2rem 0; }
+.contact-banner a { color: #3a2c24; font-weight: bold; }
+
+footer.site-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  padding: 1.4rem 1rem 2rem;
+}
+
+/* ---------- 11. Responsive ---------- */
+@media (min-width: 640px) {
+  .gallery { columns: 2; }
+  .bio-grid, .card-grid { grid-template-columns: 1fr 1fr; }
+  .project-nav { flex-direction: row; }
+  .project-nav a { flex: 1; }
+  .project-nav a:last-child { text-align: right; }
+}
+
+@media (min-width: 860px) {
+  .layout { display: grid; grid-template-columns: 230px 1fr; align-items: start; }
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-bottom: none;
+    border-right: 1px solid var(--hairline);
+  }
+  .sidebar-inner { padding: 2rem 1.4rem; }
+  .nav-list { flex-direction: column; gap: 0; }
+  .nav-section {
+    display: block;
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    color: var(--stone-salmon);
+    margin: 1.1rem 0 0.3rem;
+  }
+  .nav-list a { padding: 0.35rem 0; min-height: auto; }
+  .content { padding: 2.5rem 3rem 4rem; }
+  .gallery { columns: 3; }
+}
+
+@media (min-width: 1100px) {
+  .content { max-width: 980px; }
+}

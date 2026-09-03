@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <rect width="700" height="700" fill="#CFA99C"/>
+  <path d="M -50 700 A 550 550 0 0 1 700 -50" fill="none" stroke="#ffffff" stroke-width="60" opacity="0.4"/>
+  <path d="M 50 700 A 450 450 0 0 1 700 50" fill="none" stroke="#ffffff" stroke-width="30" opacity="0.5"/>
+  <text x="24" y="676" font-family="Georgia, serif" font-size="16" fill="#1a1a1a" opacity="0.55">07.svg</text>
+</svg>

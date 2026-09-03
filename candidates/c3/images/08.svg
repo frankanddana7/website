@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="500" height="750">
+  <rect width="500" height="750" fill="#CFA99C"/>
+  <path d="M0,220 A250,250 0 0 1 500,220 L500,0 L0,0 Z" fill="#D8C2B5"/>
+  <path d="M0,530 A250,250 0 0 0 500,530 L500,750 L0,750 Z" fill="#C58F82"/>
+  <text x="14" y="728" font-family="system-ui,sans-serif" font-size="18" fill="#1a1a1a" opacity="0.6">08.svg</text>
+</svg>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Candidates — Studio Subasio</title>
+<style>
+  :root {
+    --stone-cream:  #D8C2B5;
+    --stone-rose:   #CFA99C;
+    --stone-salmon: #C58F82;
+    --stone-amber:  #C9AA87;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  header { border-bottom: 1px solid var(--stone-cream); padding-bottom: 28px; margin-bottom: 40px; }
+  h1 { font-size: 1.9rem; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); max-width: 60ch; margin: 0; }
+
+  h2 {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted); font-weight: 600;
+    margin: 44px 0 4px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--stone-cream);
+  }
+  h2:first-of-type { margin-top: 0; }
+  .style-note { color: var(--muted); font-size: 0.88rem; margin: 10px 0 18px; max-width: 60ch; }
+
+  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 700px) { .row { grid-template-columns: repeat(3, 1fr); } }
+
+  a.card {
+    display: block; text-decoration: none; color: inherit;
+    border: 1px solid #e8e8e8; border-left: 4px solid var(--stone-rose);
+    padding: 16px 18px; border-radius: 3px;
+    transition: border-color .15s, background .15s, transform .15s;
+  }
+  a.card:hover, a.card:focus-visible {
+    background: #fdfbfa; border-color: var(--stone-rose);
+    border-left-color: var(--stone-salmon); transform: translateY(-1px);
+  }
+  a.card .id { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--stone-salmon); font-weight: 700; }
+  a.card .tier { display: block; font-size: 1.05rem; font-weight: 600; margin: 3px 0 6px; }
+  a.card .desc { display: block; font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+
+  .simple  { border-left-color: var(--stone-cream); }
+  .complex { border-left-color: var(--stone-salmon); }
+  .pick    { border-left-color: var(--stone-amber); }
+
+  footer {
+    margin-top: 60px; padding-top: 24px;
+    border-top: 1px solid var(--stone-cream);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer code {
+    background: #f6f3f1; padding: 1px 5px; border-radius: 3px;
+    font-size: 0.85em; word-break: break-all;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Candidates</h1>
+    <p class="lede">Nine skeletons for the Studio Subasio site. Each one is a complete,
+    self-contained nine-page site using identical filenames, so any candidate can be
+    promoted to the real site by moving its folder up. Every candidate is white-dominant
+    with Monte&nbsp;Subasio stone accents, and is built mobile-first.</p>
+  </header>
+
+  <h2>Modern · rounded corners · clearly AI-generated</h2>
+  <p class="style-note">Big radii, soft shadows, pill buttons, chunky sans, cards everywhere.
+  Leans into the look on purpose.</p>
+  <div class="row">
+    <a class="card simple" href="candidates/c1/index.html">
+      <span class="id">C1</span>
+      <span class="tier">Simple</span>
+      <span class="desc">The smallest version. No JavaScript at all, ~120 lines of CSS. Easiest of the nine to edit.</span>
+    </a>
+    <a class="card complex" href="candidates/c2/index.html">
+      <span class="id">C2</span>
+      <span class="tier">Complex</span>
+      <span class="desc">Sticky condensing header, animated gradient hero, lightbox, scroll reveals, filter chips.</span>
+    </a>
+    <a class="card pick" href="candidates/c3/index.html">
+      <span class="id">C3</span>
+      <span class="tier">My call</span>
+      <span class="desc">Quiet site, one memorable touch: a floating white card over a slowly drifting stone gradient.</span>
+    </a>
+  </div>
+
+  <h2>Clean · timeless · floating boxes</h2>
+  <p class="style-note">White boxes on white, hairline stone borders, serif headings,
+  barely any radius. Could have been designed in 2005 or 2035.</p>
+  <div class="row">
+    <a class="card simple" href="candidates/c4/index.html">
+      <span class="id">C4</span>
+      <span class="tier">Simple</span>
+      <span class="desc">The smallest version. No JavaScript, ~120 lines of CSS. Restraint as the whole idea.</span>
+    </a>
+    <a class="card complex" href="candidates/c5/index.html">
+      <span class="id">C5</span>
+      <span class="tier">Complex</span>
+      <span class="desc">Sticky desktop sidebar nav, masonry gallery, lightbox, scroll reveals, prev/next links.</span>
+    </a>
+    <a class="card pick" href="candidates/c6/index.html">
+      <span class="id">C6</span>
+      <span class="tier">My call</span>
+      <span class="desc">Home page that rewards exploration — hover reveals a project preview; stacked inline on phones.</span>
+    </a>
+  </div>
+
+  <h2>Editorial · exhibition catalogue <em style="font-weight:400;text-transform:none;letter-spacing:0">(my third style)</em></h2>
+  <p class="style-note">No boxes, no cards, no shadows. Typography and whitespace on white,
+  like a printed gallery catalogue. Numbered index, hairline rules, unframed images.</p>
+  <div class="row">
+    <a class="card simple" href="candidates/c7/index.html">
+      <span class="id">C7</span>
+      <span class="tier">Simple</span>
+      <span class="desc">The smallest version. No JavaScript, ~120 lines of CSS. Home page is a numbered contents list.</span>
+    </a>
+    <a class="card complex" href="candidates/c8/index.html">
+      <span class="id">C8</span>
+      <span class="tier">Complex</span>
+      <span class="desc">Full-bleed image moments, sticky section label, scroll progress rule, lightbox, reveals.</span>
+    </a>
+    <a class="card pick" href="candidates/c9/index.html">
+      <span class="id">C9</span>
+      <span class="tier">My call</span>
+      <span class="desc">A printed catalogue that happens to scroll — numbered index, quiet progress rule, full-bleed images.</span>
+    </a>
+  </div>
+
+  <footer>
+    <p><strong>Every candidate has the same nine pages:</strong> home, about, and seven
+    project templates — paintings, graphic design, silhouettes, mosaics, photography,
+    and two spares ready to be renamed.</p>
+    <p><strong>Placeholders to replace:</strong> the studio name “Studio Subasio”, the
+    artist names “Nome Uno” and “Nome Due”, the contact details
+    <code>ciao@studiosubasio.example</code> and <code>+39 000 000 000</code>, and every
+    image in each candidate’s <code>images/</code> folder.</p>
+    <p>To adopt a candidate, move the contents of its folder to the repository root,
+    replacing this page.</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* Studio Subasio — one stylesheet, kept small and easy to edit. */
+
+:root {
+  --stone-cream:  #D8C2B5;
+  --stone-rose:   #CFA99C;
+  --stone-salmon: #C58F82;
+  --stone-amber:  #C9AA87;
+  --ink: #1a1a1a;
+  --radius: 20px;
+  --shadow: 0 10px 30px rgba(26, 18, 14, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+/* Header + pill nav */
+header.site-header { padding: 24px 0 8px; }
+
+nav.pillnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background: #F7F2EF;
+  border-radius: 999px;
+}
+
+nav.pillnav a {
+  flex: 1 1 auto;
+  text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav.pillnav a:hover,
+nav.pillnav a[aria-current="page"] {
+  background: var(--stone-salmon);
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  margin: 28px 0;
+  padding: 36px 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--stone-cream), #fff 70%);
+  box-shadow: var(--shadow);
+}
+
+h1 { font-size: 2.1rem; margin: 0 0 12px; }
+.hero p, .intro { font-size: 1.05rem; max-width: 60ch; }
+
+/* Project card grid (home page) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 24px 0 40px;
+}
+
+.card {
+  display: block;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(26,18,14,0.16); }
+.card h2 { margin: 0 0 6px; font-size: 1.3rem; }
+.card p { margin: 0; color: #444; }
+
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Project page — gallery of pieces */
+figure.piece {
+  margin: 0 0 32px;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: #F7F2EF;
+  box-shadow: var(--shadow);
+}
+
+figure.piece img { border-radius: 14px; }
+
+figure.piece figcaption { padding: 14px 6px 4px; }
+figure.piece h3 { margin: 0 0 6px; font-size: 1.15rem; }
+figure.piece p { margin: 0; color: #333; }
+
+/* Contact banner — every page ends here */
+.contact-banner {
+  margin: 40px 0 30px;
+  padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--stone-amber), var(--stone-rose));
+  color: #fff;
+  text-align: center;
+}
+
+.contact-banner h2 { margin: 0 0 8px; }
+.contact-banner a { color: #fff; font-weight: 600; }
+
+footer.site-footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
